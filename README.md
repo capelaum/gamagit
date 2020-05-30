@@ -1,10 +1,6 @@
 # Projeto Gama Git - Hiring Coders :heavy_check_mark:
 
---------------
-
 > Consiste da funcionalidade de pesquisar pelo username de um usuário do github e retornar o nome de todos seus repositórios, caso não exista o username buscado, deve-se retornar uma mensagem de erro.
-
-
 
 Utiliza:
 
@@ -15,8 +11,6 @@ Utiliza:
 - Styled components para a estilização básica da aplicação
 
 ------------
-
-
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
