@@ -30,15 +30,16 @@ function App(props) {
   }
 
   return (
-    <S.HomeContainer>
-      <S.Content> 
-        <h1>Find Github Repos from a user</h1>
-        <h2>{ props.title} by { props.user}</h2>
-        <S.Input type="text" className="user-input" placeholder="username" value={ user } onChange={e => setUser(e.target.value)} />
-        <S.Button type="button" onClick={handlePesquisa}>Search</S.Button>
-      </S.Content>
-      { erro ? <S.ErrorMsg>Ocorreu um erro. Tente novamente.</S.ErrorMsg> : '' }
-    </S.HomeContainer>
+      <S.HomeContainer>
+        <S.Content> 
+          <img src="github_white.png" alt="github logo" width="100px"/>
+          <h1>Find Github Repos from a user</h1>
+          <S.Input type="text" className="user-input" placeholder="username" value={ user } onChange={e => setUser(e.target.value)} />
+          <S.Button type="button" onClick={handlePesquisa}>Search</S.Button>
+        </S.Content>
+        { erro ? <S.ErrorMsg>Ocorreu um erro. Tente novamente.</S.ErrorMsg> : '' }
+      </S.HomeContainer>
+    
   );
 }
 

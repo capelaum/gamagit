@@ -4,11 +4,9 @@ import Routes from './routes';
 // JSX = JavaScript XML - JS entre chaves!
 //* fragmento => Tag Vazia
 
-
 function App() {
   return (
-    
-    <Routes />
+    <Routes title="TITULO"/>
   );
 }
 

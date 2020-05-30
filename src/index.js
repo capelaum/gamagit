@@ -4,6 +4,6 @@ import App from './App';
 
 // inserindo no root o que esta em App
 ReactDOM.render(
-  <App title="Hello React" user="Luis"/>,
+  <App />,
   document.getElementById('root')
 );

@@ -7,6 +7,8 @@ export const HomeContainer = styled.div
   align-items: center;
   justify-content: center;
   height: 100vh;
+  background-color: #333;
+  margin: 0;
 `
 
 export const Content = styled.div
@@ -16,7 +18,7 @@ export const Content = styled.div
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
+  color: #fff;
 `
 
 export const Input = styled.input 
@@ -48,12 +50,15 @@ export const Button = styled.button
     box-shadow: none;
   }
 
+  &:hover {
+    color: #333;
+  }
 `
 
 export const ErrorMsg = styled.span
 `
   display: block;
-  font-size: 0.7rem;
+  font-size: 20px;
   color: red;
   font-weight: 600;
   margin-top: 1rem;

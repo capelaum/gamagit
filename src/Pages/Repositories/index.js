@@ -8,13 +8,17 @@ export default function Repositories() {
 
   useEffect(() => {
     let repositoriesName = localStorage.getItem('repositoriesName');
+
     if(repositoriesName !== null) {
+      
       repositoriesName = JSON.parse(repositoriesName);
       setRepositories(repositoriesName);
       //localStorage.clear();
+
     } else {
       history.push('/');
     }
+
   }, []);
 
   return (
