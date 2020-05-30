@@ -1,22 +1,30 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import * as S from './styled';
 
-export default function repositories() {
+export default function Repositories() {
+
+  const [ repositories, setRepositories ] = useState([]);
+
+  useEffect(() => {
+    let repositoriesName = localStorage.getItem('repositoriesName');
+    repositoriesName = JSON.parse(repositoriesName);
+    setRepositories(repositoriesName);
+    //localStorage.clear();
+  }, []);
+
   return (
     <S.Container>
       <S.Title>Repositórios</S.Title>
       <S.List>
-        <S.ListItem>Repositório: Nome Repositório 1</S.ListItem>
-        <S.ListItem>Repositório: Nome Repositório 2</S.ListItem>
-        <S.ListItem>Repositório: Nome Repositório 3</S.ListItem>
-        <S.ListItem>Repositório: Nome Repositório 4</S.ListItem>
-        <S.ListItem>Repositório: Nome Repositório 5</S.ListItem>
-        <S.ListItem>Repositório: Nome Repositório 6</S.ListItem>
-        <S.ListItem>Repositório: Nome Repositório 7</S.ListItem>
-        <S.ListItem>Repositório: Nome Repositório 8</S.ListItem>
-        <S.ListItem>Repositório: Nome Repositório 9</S.ListItem>
-        <S.ListItem>Repositório: Nome Repositório 10</S.ListItem>
+      { 
+        repositories.map(repository => {
+          return (
+            <S.ListItem>Repositório: { repository }</S.ListItem>
+          )
+        })
+      }
       </S.List>
+      <S.LinkHome to="/">Voltar</S.LinkHome>
     </S.Container>
   )
 }

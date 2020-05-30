@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
 import axios from 'axios';
 import * as S from './styled';
+import { useHistory } from 'react-router-dom';
 
 function App(props) {
   // useState retorna um array = [value, function]
   const [ user, setUser ] = useState('');
+  const history = useHistory();
 
   function handlePesquisa(){
     axios.get(`http://api.github.com/users/${ user }/repos`).then(response => {
@@ -13,19 +15,21 @@ function App(props) {
 
       repositories.map((repository) => {
         respositoriesName.push(repository.name);
-      })
-      console.log(JSON.stringify(repositories));
+      });
+
+      localStorage.setItem('repositoriesName', JSON.stringify(respositoriesName));
+      history.push('./repositories');
+
     });
-    
   }
 
   return (
-    
     <S.Container> 
-      <h2>{props.title} by {props.user}</h2>
+      <h1>Find Github Repos from a User</h1>
+      <h2>{ props.title} by { props.user}</h2>
       <p>{user}</p>
       <S.Input type="text" className="user-input" placeholder="user" value={ user } onChange={e => setUser(e.target.value)} />
-      <S.Button type="button" onClick={handlePesquisa} >Pesquisar</S.Button>
+      <S.Button type="button" onClick={handlePesquisa}>Search</S.Button>
     </S.Container>
   );
 }

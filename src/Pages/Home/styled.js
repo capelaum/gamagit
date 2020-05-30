@@ -5,6 +5,7 @@ export const Container = styled.div
   width: 100vw;
   height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 
@@ -31,6 +32,7 @@ export const Button = styled.button
   background: #000;
   color: #fff;
   border-radius: 0 .25rem .25rem 0;
+  margin-top: 20px;
 
   &:focus,
   &:active {
