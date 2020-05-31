@@ -4,9 +4,9 @@
 
 Utiliza:
 
-- Axios para utilizar a api do github ( http://api.github.com/users/username/repos )
+- Axios para consumir a API do github ( http://api.github.com/users/username/repos )
 
-- React , seus hooks e routes para fazer a Single Page Aplication (SPA).
+- ReactDOM, seus hooks, routes para fazer a Single Page Aplication (SPA)
 
 - Styled components para a estilização básica da aplicação
 
