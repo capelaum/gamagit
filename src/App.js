@@ -5,8 +5,8 @@ import Routes from './routes';
 //* fragmento => Tag Vazia
 
 function App() {
-  return (
-    <Routes title="TITULO"/>
+  return(
+    <Routes/>
   );
 }
 

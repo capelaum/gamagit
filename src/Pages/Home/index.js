@@ -19,27 +19,32 @@ function App(props) {
           respositoriesName.push(repository.name);
         });
 
+        localStorage.setItem('userName', user);
         localStorage.setItem('repositoriesName', JSON.stringify(respositoriesName));
         setErro(false);
         history.push('./repositories');
-
       })
       .catch(error => {
         setErro(true);
       });
   }
 
-  return (
+  return(
       <S.HomeContainer>
         <S.Content> 
           <img src="github_white.png" alt="github logo" width="100px"/>
-          <h1>Find Github Repos from a user</h1>
-          <S.Input type="text" className="user-input" placeholder="username" value={ user } onChange={e => setUser(e.target.value)} />
-          <S.Button type="button" onClick={handlePesquisa}>Search</S.Button>
+          <h1>Encontre os repositórios de um usuário do Github!</h1>
+          <S.Input 
+            type="text" 
+            className="user-input" 
+            placeholder="Username" 
+            value={ user } 
+            onChange={e => setUser(e.target.value)} 
+          />
+          <S.Button type="button" onClick={handlePesquisa}>Buscar</S.Button>
         </S.Content>
         { erro ? <S.ErrorMsg>Ocorreu um erro. Tente novamente.</S.ErrorMsg> : '' }
       </S.HomeContainer>
-    
   );
 }
 
