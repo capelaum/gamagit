@@ -2,7 +2,7 @@
 
 > Consiste da funcionalidade de pesquisar pelo username de um usuário do github e retornar o nome de todos seus repositórios, caso não exista o username buscado, deve-se retornar uma mensagem de erro.
 
-Utiliza:
+#### Utiliza:
 
 - Axios para consumir a API do github ( http://api.github.com/users/username/repos )
 
