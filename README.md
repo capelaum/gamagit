@@ -2,7 +2,7 @@
 
 > Consiste da funcionalidade de pesquisar pelo username de um usuário do github e retornar o nome de todos seus repositórios, caso não exista o username buscado, deve-se retornar uma mensagem de erro.
 
-#### Utiliza:
+### Utiliza:
 
 - Axios para consumir a API do github ( http://api.github.com/users/username/repos )
 
@@ -10,7 +10,13 @@
 
 - Styled components para a estilização básica da aplicação
 
+### Para executar, rode o comando na pasta do projeto:
+
+#### `yarn start`
+
 ------------
+
+## README Padrão do React abaixo
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
